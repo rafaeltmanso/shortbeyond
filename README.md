@@ -55,7 +55,7 @@ The application runs in a containerized environment defined in `shortbeyond.yaml
 
 The test suite follows a layered architecture pattern:
 
-```
+```text
 playwright/
 ├── config/          # Database utilities and configuration
 ├── e2e/             # Test specifications organized by domain
@@ -80,25 +80,29 @@ playwright/
 ### Installation
 
 1. **Clone the repository**
+
    ```bash
    git clone <repository-url>
    cd shortbeyond
    ```
 
 2. **Install dependencies**
+
    ```bash
    npm install
    ```
 
 3. **Start the infrastructure**
+
    ```bash
    # Start all containers (API, Database, Adminer, Web)
    podman-compose -f shortbeyond.yaml up -d
    ```
 
 4. **Configure environment variables**
-   
+
    The `.env` file contains the necessary configuration:
+
    ```env
    BASE_API=http://localhost:3333
    DB_HOST=localhost
@@ -107,15 +111,19 @@ playwright/
    DB_PASS=dba
    DB_NAME=ShortDB
    ```
+   
+   > **⚠️ Note**: This is an educational project. The `.env` file is intentionally included in the repository with default local development credentials to make it easier for others to clone and run the tests immediately. These are **not** production credentials and should only be used in local development environments.
 
 ## 🧪 Running Tests
 
 ### Execute All Tests
+
 ```bash
 npx playwright test
 ```
 
 ### Run Specific Test Suite
+
 ```bash
 # Authentication tests
 npx playwright test playwright/e2e/auth
@@ -128,18 +136,20 @@ npx playwright test playwright/e2e/health.spec.js
 ```
 
 ### View Test Report
+
 ```bash
 npx playwright show-report
 ```
 
 ### Debug Mode
+
 ```bash
 npx playwright test --debug
 ```
 
 ## 📁 Project Structure
 
-```
+```text
 shortbeyond/
 ├── .env                          # Environment configuration
 ├── .github/
@@ -294,17 +304,11 @@ This test automation suite was developed by **Rafael Manso** as part of a compre
 ## 📚 Learning Resources
 
 For more content on test automation and quality engineering, check out Fernando Papito's work:
-- **GitHub**: [@papitodev](https://github.com/papitodev)
 
----
+- **GitHub**: [@papitodev](https://github.com/papitodev)
 
 **Note**: This is a study project developed for educational purposes as part of a professional training bootcamp. The goal is to demonstrate proficiency in API test automation using modern tools and industry best practices.
 
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-**Built with ❤️ for learning and growth in software quality engineering**
-# shortbeyond-api-testing
