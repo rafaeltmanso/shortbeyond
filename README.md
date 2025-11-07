@@ -4,7 +4,7 @@
 [![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
-[![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
+[![Podman](https://img.shields.io/badge/Podman-892CA0?style=for-the-badge&logo=podman&logoColor=white)](https://podman.io/)
 [![Faker.js](https://img.shields.io/badge/Faker.js-FF6C37?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTIgMkM2LjQ4IDIgMiA2LjQ4IDIgMTJzNC40OCAxMCAxMCAxMCAxMC00LjQ4IDEwLTEwUzE3LjUyIDIgMTIgMnoiIGZpbGw9IndoaXRlIi8+PC9zdmc+&logoColor=white)](https://fakerjs.dev/)
 
 A comprehensive Playwright-based API testing suite for the **ShortBeyond** URL shortener service. This project demonstrates professional test automation practices including custom fixtures, data factories, and robust test architecture.
@@ -37,8 +37,8 @@ ShortBeyond is a URL shortening service that provides a REST API for creating, m
 - **[Playwright](https://playwright.dev/)** - Modern end-to-end testing framework
 - **[Node.js](https://nodejs.org/)** - JavaScript runtime
 - **[Faker.js](https://fakerjs.dev/)** - Test data generation
-- **[PostgreSQL](https://www.postgresql.org/)** - Database (via Docker)
-- **[Docker](https://www.docker.com/)** - Containerized infrastructure
+- **[PostgreSQL](https://www.postgresql.org/)** - Database (via Podman)
+- **[Podman](https://podman.io/)** - Containerized infrastructure
 
 ## 🏗️ Architecture
 
@@ -74,7 +74,7 @@ playwright/
 ### Prerequisites
 
 - Node.js (v18 or higher)
-- Docker and Docker Compose
+- Podman and Podman Compose
 - Git
 
 ### Installation
@@ -93,7 +93,7 @@ playwright/
 3. **Start the infrastructure**
    ```bash
    # Start all containers (API, Database, Adminer, Web)
-   docker-compose -f shortbeyond.yaml up -d
+   podman-compose -f shortbeyond.yaml up -d
    ```
 
 4. **Configure environment variables**
@@ -146,7 +146,7 @@ shortbeyond/
 │   └── copilot-instructions.md   # AI coding assistant guide
 ├── global-setup.js               # Pre-test database cleanup
 ├── playwright.config.js          # Playwright configuration
-├── shortbeyond.yaml              # Docker infrastructure definition
+├── shortbeyond.yaml              # Podman infrastructure definition
 └── playwright/
     ├── config/
     │   └── database.js           # Database cleanup utilities
