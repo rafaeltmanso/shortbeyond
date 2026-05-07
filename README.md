@@ -312,11 +312,4 @@ For more content on test automation and quality engineering, check out Fernando 
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-<<<<<<< HEAD
-=======
 
----
-
-**Built with ❤️ for learning and growth in software quality engineering**
-
->>>>>>> 5191d9c47ed26654accf487803a7ed1fa0c9622d
